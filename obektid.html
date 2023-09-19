@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Ostunimekiri</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Ostunimekiri</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Lisa uus objekt</h2>
+                <form id="addItemForm">
+                    <div class="form-group">
+                        <label for="itemName">Nimi</label>
+                        <input type="text" class="form-control" id="itemName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Hind</label>
+                        <input type="number" class="form-control" id="itemPrice" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemQuantity">Kogus</label>
+                        <input type="number" class="form-control" id="itemQuantity" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Lisa</button>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <h2>Olemasolevad objektid</h2>
+                <ul id="itemList" class="list-group">
+                </ul>
+                <button id="deleteSelected" class="btn btn-danger mt-3">Kustuta valitud</button>
+                <input type="radio" name="searchType" id="searchByName" value="name" checked> Nime järgi
+                <input type="radio" name="searchType" id="searchByPrice" value="price"> Hinna järgi
+                <input type="text" id="searchInput" class="form-control mt-2" placeholder="Otsi...">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="objektid.js"></script>
+</body>
+</html>
